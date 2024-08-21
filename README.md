@@ -57,3 +57,6 @@ To run this project locally, follow these steps:
    ```bash
    npm start
    
+**The project will start on http://localhost:3000/**
+
+

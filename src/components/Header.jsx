@@ -1,6 +1,6 @@
 import { Button, Container, Nav, Badge } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import styled from "styled-components";
 import logo from "../assets/logo-no-background.png";
 
@@ -16,13 +16,17 @@ const NavLink = styled(Link)`
   }
 `;
 
+// Styled Component for Nav items
 const NavItem = styled.li`
   margin-left: 15px;
 `;
 
 function Header({ username }) {
+  // Get current loaction to determine active nav link
   const location = useLocation();
-  const cartItems = useSelector(state => state.cart.items); // Get cart items from Redux store
+
+  // Retrieve cart items from Redux store and calculcate item count
+  const cartItems = useSelector((state) => state.cart.items); // Get cart items from Redux store
   const itemCount = cartItems.length; // Calculate the number of items in the cart
 
   return (
@@ -81,15 +85,16 @@ function Header({ username }) {
                   )}
                 </NavLink>
               </NavItem>
-             
             </ul>
             <div>
-                {username ? (
-                  `Welcome, ${username}!`
-                ) : (
-                  <NavLink className="nav-link" to="/register">Register</NavLink>
-                )}
-              </div>
+              {username ? (
+                `Welcome, ${username}!`
+              ) : (
+                <NavLink className="nav-link" to="/register">
+                  Register
+                </NavLink>
+              )}
+            </div>
           </div>
         </Container>
       </nav>
