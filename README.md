@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Web Store Capstone Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a React-based web store application designed to showcase the practical application of React, JSX, and JavaScript concepts. The web store features a user registration and login system, a product display page, and a cart page where users can manage their purchases. The project includes state management using Redux and various interactive and visually appealing components.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+1. **Create React App**: The application was bootstrapped using Create React App.
+   
+2. **Interactive Components**: The app includes at least four different types of attractively styled components that respond to user interactions. React-Bootstrap was used for styling alongside custom CSS.
+   
+3. **User Registration**: Users can register by entering the following details:
+   - First name
+   - Surname
+   - Username
+   - Email address
+   - Password
+   Input validation ensures that only valid email addresses and strong passwords are accepted.
+   
+4. **User Login**: Registered users can log in by entering their username. The username is stored in a state and displayed in the header component.
+   
+5. **Persistent Header**: The header component includes a navigation menu and is displayed at the top of the page across all URLs.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+6. **Main Components**:
+   - **Landing Page**: The home page of the web store.
+   - **Product Page**: Displays a list of items available for purchase, allowing users to add them to their cart.
+   - **Cart Page**: Shows the selected items, total cost, and allows the user to select a shipping method.
+   
+7. **Dynamic Rendering**: Several components are rendered using the `array.map()` method, each with a unique key.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+8. **State Management**: User interactions modify the state of components. Redux is used for managing the global state.
 
-### `npm test`
+9. **Cart Functionality**: Items added by the user are stored in a "cart" state, which is used to display the user's selections and calculate the total cost on the cart page.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+10. **Shipping Options**: Users can select a shipping method and request help to get information about the shipping options.
 
-### `npm run build`
+11. **Attractive UI**: The user interface is designed to be intuitive and visually appealing.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To run this project locally, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository**:
+   ```bash
+   https://github.com/Kurtney21/hdev-web-store.git
 
-### `npm run eject`
+2. **Navigate to the Project Directory**:
+   ```bash
+   cd web-store
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Install Dependencies**:
+   ```bash
+   npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+4. **Start Application**:
+   ```bash
+   npm start
+   
