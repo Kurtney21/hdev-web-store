@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
-import { Button, Card, Container, Dropdown, Row, Col } from "react-bootstrap";
+import { Button, Card, Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import { productsArray } from "../data/products"; // Import the productsArray
 

@@ -1,4 +1,4 @@
-import { Button, Container, Nav, Badge } from "react-bootstrap";
+import { Button, Container, Badge } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
@@ -21,13 +21,14 @@ const NavItem = styled.li`
   margin-left: 15px;
 `;
 
-function Header({ username }) {
+function Header() {
   // Get current loaction to determine active nav link
   const location = useLocation();
 
   // Retrieve cart items from Redux store and calculcate item count
   const cartItems = useSelector((state) => state.cart.items); // Get cart items from Redux store
   const itemCount = cartItems.length; // Calculate the number of items in the cart
+  const username = useSelector((state) => state.user.username); // Get username from Redux store
 
   return (
     <header className="header">
@@ -86,13 +87,18 @@ function Header({ username }) {
                 </NavLink>
               </NavItem>
             </ul>
-            <div>
+            <div className="d-flex">
               {username ? (
                 `Welcome, ${username}!`
               ) : (
-                <NavLink className="nav-link" to="/register">
-                  Register
-                </NavLink>
+                <div className="d-flex">
+                  <NavLink className="nav-link" to="/login">
+                    Login
+                  </NavLink>{" "}
+                  <NavLink className="nav-link ms-2" to="/register">
+                    Register
+                  </NavLink>
+                </div>
               )}
             </div>
           </div>

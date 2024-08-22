@@ -5,10 +5,12 @@ import { Button, Container, Row, Col, InputGroup } from "react-bootstrap";
 import { FaRegUserCircle, FaEye, FaEyeSlash } from "react-icons/fa";
 import { Formik, Form, ErrorMessage, Field } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate(); // Hook for navigation
 
   // Initial form values
   const initialValues = {
@@ -41,10 +43,12 @@ const Register = () => {
 
   // Handle form submission
   const onSubmit = (values, { resetForm }) => {
-    dispatch(setUser(values.username));
+    // Will use local storage or backend services to store user data in later versions
+    dispatch(setUser(values.username)) // Set the user in the Redux store
     alert("Successfully registered.");
     resetForm(); // Reset the form after successful registration
-    // Redirect to home or another page if needed
+    // Redirect to Login Page
+    navigate("/login");
   };
 
   // Toggle password visibility

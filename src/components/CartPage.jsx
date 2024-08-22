@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Container, Button, Form } from "react-bootstrap";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { FaQuestionCircle } from "react-icons/fa";
 
 const CartPage = () => {
